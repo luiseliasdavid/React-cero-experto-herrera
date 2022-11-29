@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Cargat React -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <title>Curso de React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // ==== Código
+      const nombre = "luis";
+      const h1tag = <h1>hola {nombre}</h1>;
+
+      const divroot = document.querySelector("#root");
+      //-funciones
+      const getUsuarioActivo = (nombre) => ({
+        uid: "123456",
+        userName: nombre,
+      });
+
+      const usuarioActivo = getUsuarioActivo("luis");
+
+      //console.log(usuarioActivo)
+
+      //destructuring
+      const superHeroe = {
+        nombre: "luis",
+        edad: " 42",
+      };
+      const useContext = ({ nombre, edad }) => {
+        return {
+          nombreClave: nombre,
+          anios: edad,
+          latitud: {
+            norte: 44,
+            sur: 66,
+          },
+        };
+      };
+      const {
+        nombreClave,
+        anios,
+        latitud: { norte, sur },
+      } = useContext(superHeroe);
+
+      //console.log(nombreClave, anios, norte, sur);
+      //---destructurin2
+      const useState = (valor)=> {
+        return [valor, ()=> {console.log("hola mundo")}]
+      }
+      const arr = useState("luis")
+      const [nombre1,setNombre1]= arr
+
+      console.log(nombre1)
+      setNombre1()
+
+      ReactDOM.render(h1tag, divroot);
+    </script>
+  </body>
+</html>

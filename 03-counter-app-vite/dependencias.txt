@@ -1,0 +1,9 @@
+
+
+//para configurar jest 
+yarn add -D whatwg-fetch
+
+//react testing laibrary
+yarn add --dev @testing-library/react
+yarn add jest-environment-jsdom
+yarn add -D @babel/preset-react
