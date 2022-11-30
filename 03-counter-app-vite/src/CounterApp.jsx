@@ -19,8 +19,8 @@ export const CounterApp = ({value}) => {
 
     return (
         <>
-            <h1>CounterApp</h1>
-            <h2> {counter} </h2>
+            <h1  >CounterApp</h1>
+            <h2 data-testid="h2"> {counter} </h2>
             <button  onClick={()=>handleClick("+1")}>+1</button>
             <button onClick={()=>handleClick("-1")} >-1</button>
             <button  onClick={()=>handleClick("reset")}>Reset</button>
