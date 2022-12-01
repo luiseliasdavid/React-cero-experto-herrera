@@ -14,3 +14,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
        <CounterApp value={20} />
     </React.StrictMode>
 )
+
+// https://github.com/Klerith/react-vite-counter-app/tree/fin-seccion-5

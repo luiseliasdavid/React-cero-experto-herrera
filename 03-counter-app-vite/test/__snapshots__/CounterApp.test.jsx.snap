@@ -12,7 +12,9 @@ exports[`Probando counter app should  match with snapshot 1`] = `
     100
      
   </h2>
-  <button>
+  <button
+    data-testid="+1"
+  >
     +1
   </button>
   <button>
