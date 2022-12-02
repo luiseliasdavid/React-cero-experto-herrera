@@ -1,13 +1,14 @@
 import { useState } from "react"
-import { AddCategory } from "./components/AddCategory"
+import { AddCategory , GifGrid } from "./components"
+
 
 export const GifExpertApp = () => {
 
-const [category,setCategory]= useState(['element1', 'element2'])
+const [category,setCategory]= useState([])
 
 const agregarElement = (element)=> {
   if(category.includes(element)) return;
-  setCategory([...category,element])
+  setCategory([element,...category])
 }
 
   return (
@@ -16,9 +17,9 @@ const agregarElement = (element)=> {
 
     <AddCategory agregarElement={agregarElement} />
     
-    <ol>
-      {category.map(element =>{return  <li key={element} >{ element} </li>})}
-    </ol>
+    <div>
+      {category.map(element => <GifGrid key={element} category={element} /> )}
+    </div>
    </>
   )
 }
